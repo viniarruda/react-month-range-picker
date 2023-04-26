@@ -14,10 +14,12 @@ React component that can select an range of months separated by year
 
 To run that demo on your own computer:
 
+```
 Clone this repository
 yarn install
 yarn storybook
 Visit http://localhost:6006/
+```
 
 # Features
 
@@ -46,4 +48,4 @@ type RangeParams = {
   endYear: number
 }
 
-`
+```

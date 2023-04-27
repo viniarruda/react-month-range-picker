@@ -7,7 +7,10 @@ export type RangeParams = {
 
 export type MonthRangePickerProps = {
   onRangeSelect: (params: RangeParams) => void
-  columns: 1 | 2
-  initialYear: number
-  locale: string
+  columns?: 1 | 2
+  initialYear?: number
+  locale?: string
+  calendarClassname?: string
+  headerClassname?: string
+  monthClassname?: string
 }

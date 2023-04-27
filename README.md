@@ -21,13 +21,6 @@ yarn storybook
 Visit http://localhost:6006/
 ```
 
-# Features
-
-- Add `className` to Container
-- Add `className` to Calendar
-- Add `className` to Header
-- Add `className` to MonthItem
-
 # Props
 
 | Props  | type | Info

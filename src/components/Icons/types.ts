@@ -1,4 +1,4 @@
-import { CSS } from '../../themes/stitches.config'
+import { CSS } from '@themes/stitches.config'
 
 export type IconProps = {
   fill?: CSS['color']

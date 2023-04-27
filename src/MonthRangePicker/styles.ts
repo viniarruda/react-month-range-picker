@@ -1,5 +1,5 @@
-import { styled } from '../themes/stitches.config'
-import { Flex, Column } from '../components'
+import { styled } from '@themes/stitches.config'
+import { Flex, Column } from '@components'
 
 export const Calender = styled(Column, {
   boxShadow: '2px 10px 12px 0.2',

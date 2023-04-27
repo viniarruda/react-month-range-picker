@@ -1,0 +1,15 @@
+.github
+.husky
+.storybook
+.vscode
+public
+scripts
+src
+storybook-static
+tests
+.editorconfig
+.eslintrc.js
+.prettierrc
+tsconfig.build.cjs.json
+tsconfig.build.esm.json
+tsconfig.json

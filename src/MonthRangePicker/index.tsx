@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { Typography, Row, Flex, ChevronLeft, ChevronRight } from '../components'
+import { Row, Typography, Flex, ChevronLeft, ChevronRight } from '@components'
 
 import { monthsNumber } from './constants'
 import { Month, Calender, Arrow } from './styles'

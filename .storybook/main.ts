@@ -1,4 +1,7 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+
 import type { StorybookConfig } from '@storybook/react-webpack5'
+
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -10,6 +13,17 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
+  },
+  webpackFinal: async config => {
+
+    config.resolve.plugins = [
+      ...(config.resolve.plugins || []),
+      new TsconfigPathsPlugin({
+        extensions: config.resolve.extensions
+      })
+    ]
+
+    return config
   },
   docs: {
     autodocs: 'tag',

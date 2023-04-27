@@ -1,7 +1,7 @@
-import { getSpacing } from '../../themes/utils'
-import { styled } from '../../themes/stitches.config'
+import { getSpacing } from '@themes/utils'
+import { styled } from '@themes/stitches.config'
 
-import { Box } from '../Box'
+import { Box } from '@components'
 
 export const Flex = styled(Box, {
   display: 'flex',

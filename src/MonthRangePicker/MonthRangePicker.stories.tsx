@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Meta, StoryFn } from '@storybook/react'
 
-import { Flex } from '../components/Flex'
+import { Flex } from '@components'
 
 import { MonthRangePicker } from '.'
 import { MonthRangePickerProps, RangeParams } from './types'

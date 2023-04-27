@@ -1,6 +1,6 @@
-import { getSpacing } from '../../themes/utils'
+import { getSpacing } from '@themes/utils'
 
-import { styled } from '../../themes/stitches.config'
+import { styled } from '@themes/stitches.config'
 
 export const Box = styled('div', {
   variants: {

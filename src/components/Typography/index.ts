@@ -1,6 +1,6 @@
 import { ComponentProps } from 'react'
 
-import { styled } from '../../themes/stitches.config'
+import { styled } from '@themes/stitches.config'
 
 export const Typography = styled(`p`, {
   lineHeight: `$default`,

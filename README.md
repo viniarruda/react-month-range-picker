@@ -23,12 +23,12 @@ Visit http://localhost:6006/
 
 # Props
 
-| Props  | type | Info
-| ------------- | ------------- | ------------- |
-| columns  | 1 or 2  | Columns to show  |
-| initialYear  | number  | The first initialYear |
-| locale  | string  | ex: `en-US` |
-| onRangeSelect  | function  | Pass an function to get the RangeParams |
+| Props  | type | defaultValue | Info
+| ------------- | ------------- | ------------- | ------------- |
+| columns  | 1 or 2  | 1 | Columns to show  |
+| initialYear  | number  | 2020 | The first initialYear |
+| locale  | string  | `en-US` | ex: `en-US` |
+| onRangeSelect  | function  | required | Pass an function to get the RangeParams |
 
 ```typescript
 

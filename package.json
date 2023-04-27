@@ -1,6 +1,6 @@
 {
   "name": "@viniarruda/react-month-range-picker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Vinicius Arruda",
   "description": "React Month Range Picker",
   "types": "types/index.d.ts",

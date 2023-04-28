@@ -10,7 +10,7 @@ export type MonthRangePickerProps = {
   columns?: 1 | 2
   initialYear?: number
   locale?: string
-  calendarClassname?: string
-  headerClassname?: string
-  monthClassname?: string
+  calendarClassName?: string
+  headerClassName?: string
+  monthClassName?: string
 }

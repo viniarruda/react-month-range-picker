@@ -11,9 +11,9 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
   initialYear = 2020,
   locale = 'en-US',
   columns = 1,
-  calendarClassname,
-  headerClassname,
-  monthClassname,
+  calendarClassName,
+  headerClassName,
+  monthClassName,
 }) => {
   const [startMonth, setStartMonth] = useState<Date | null>(null)
   const [endMonth, setEndMonth] = useState<Date | null>(null)
@@ -80,7 +80,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
     return (
       <Month
         key={month}
-        className={monthClassname}
+        className={monthClassName}
         justify="center"
         disabled={isDisabled}
         variant={getVariants()}
@@ -134,12 +134,12 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
   return (
     <>
       {columns === 1 ? (
-        <Calender borderRadius="small" p="12" className={calendarClassname}>
+        <Calender borderRadius="small" p="12" className={calendarClassName}>
           <Row
             justify="between"
             p="8"
             align="center"
-            className={headerClassname}
+            className={headerClassName}
           >
             <div>
               <Arrow onClick={handlePrevYear}>
@@ -158,7 +158,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
           <div>{renderYear(today.getFullYear() + yearOffset)}</div>
         </Calender>
       ) : (
-        <Calender className={calendarClassname}>
+        <Calender className={calendarClassName}>
           <Row justify="between" p="12" align="center">
             <Arrow onClick={handlePrevYear}>
               <ChevronLeft fill="$textSecondary" fontSize="$20" />

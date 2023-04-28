@@ -16,22 +16,20 @@
     "build:esm": "ttsc -b tsconfig.build.esm.json"
   },
   "dependencies": {
-    "@stitches/react": "^1.2.8",
     "@storybook/react": "^7.0.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.25",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "storybook": "^7.0.7",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "4.7.4",
     "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "@stitches/react": "^1.2.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.7",
@@ -43,6 +41,10 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.25",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
@@ -52,6 +54,7 @@
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "ts-node": "^10.9.1",
+    "typescript": "4.7.4",
     "ttypescript": "^1.5.15",
     "typescript-transform-paths": "3.4.6",
     "webpack": "^5.81.0"

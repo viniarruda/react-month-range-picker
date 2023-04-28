@@ -2,6 +2,8 @@
 
 React component that can select an range of months separated by year
 
+Demo [here](https://viniarruda-react-month-range-picker.vercel.app/?path=/story/forms-monthrangepicker--default)
+
 # Examples
 
 ![default](https://github.com/viniarruda/react-month-range-picker/blob/main/assets/oneColumn.png?raw=true)
@@ -29,6 +31,10 @@ Visit http://localhost:6006/
 | initialYear  | number  | 2020 | The first initialYear |
 | locale  | string  | `en-US` | ex: `en-US` |
 | onRangeSelect  | function  | required | Pass an function to get the RangeParams |
+| calendarClassname  | string  | optional | Pass an `className` to style calendar container |
+| headerClassname  | string  | optional | Pass an `className` to style calendar header |
+| monthClassname  | string  | optional | Pass an `className` to style month item |
+
 
 ```typescript
 

@@ -3,6 +3,10 @@
   "version": "0.1.3",
   "author": "Vinicius Arruda",
   "description": "React Month Range Picker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniarruda/react-month-range-picker.git"
+  },
   "types": "types/index.d.ts",
   "main": "cjs/index.js",
   "module": "esm/index.js",

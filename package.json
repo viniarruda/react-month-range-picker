@@ -101,7 +101,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viniarruda/react-month-range-picker.git"
+    "url": "https://github.com/viniarruda/react-month-range-picker.git"
   },
   "keywords": [
     "month-range-picker",

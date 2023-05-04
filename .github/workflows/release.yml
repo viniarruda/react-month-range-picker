@@ -48,7 +48,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
         run: |
-          echo "@viniarruda:registry=https://npm.pkg.github.com/" >> ~/.npmrc && echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc && cat ~/.npmrc
+          echo "@viniarruda:registry=https://https://registry.npmjs.org/" >> ~/.npmrc && echo "//https://registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc && cat ~/.npmrc
 
       - name: Create Release
         uses: actions/create-release@v1

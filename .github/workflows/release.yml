@@ -38,6 +38,12 @@ jobs:
       - name: Build ESM
         run: yarn build:esm
 
+      - name: Create Tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create .npmrc
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN  }}

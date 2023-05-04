@@ -1,0 +1,71 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.14.0'
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Cache node modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true' # It will run install dependencies just if hash of yarn.lock changed
+        run: yarn install --frozen-lockfile --prefer-offline
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PACKAGES_TOKEN }}
+
+      - name: Build CJS
+        run: yarn build:cjs
+
+      - name: Build ESM
+        run: yarn build:esm
+
+      - name: Create Tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v5.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+        run: |
+          echo "@viniarruda:registry=https://npm.pkg.github.com/" >> ~/.npmrc && echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc && cat ~/.npmrc
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          release_name: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+
+      - name: Update Github Name
+        run: git config user.name viniarruda
+
+      - name: Commit Updated Version
+        run: npm version ${{ steps.tag_version.outputs.new_version }}
+
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PACKAGES_TOKEN }}

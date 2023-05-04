@@ -62,6 +62,9 @@ jobs:
       - name: Update Github Name
         run: git config user.name viniarruda
 
+      - name: Update Github Email
+        run: git config user.email viniarruda.souza@gmail.com
+
       - name: Commit Updated Version
         run: npm version ${{ steps.tag_version.outputs.new_version }}
 

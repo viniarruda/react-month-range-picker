@@ -80,7 +80,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
     return (
       <Month
         key={month}
-        className={`${monthClassName}-${getVariants()}`}
+        className={`${monthClassName}_${getVariants()}`}
         justify="center"
         disabled={isDisabled}
         variant={getVariants()}

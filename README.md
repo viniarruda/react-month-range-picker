@@ -45,6 +45,16 @@ Visit http://localhost:6006/
 | headerClassname  | string  | optional | Pass an `className` to style calendar header |
 | monthClassname  | string  | optional | Pass an `className` to style month item |
 
+# Styling
+
+To control the month styles, you can use `monthClassName="month"` and this name will increment to variant month.
+
+Soo, you can control the styles using:
+
+`.month_start`
+`.month_selected`
+`.month_end`
+
 
 ```typescript
 

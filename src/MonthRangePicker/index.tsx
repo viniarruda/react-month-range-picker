@@ -80,7 +80,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
     return (
       <Month
         key={month}
-        className={monthClassName}
+        className={`${monthClassName}_${getVariants()}`}
         justify="center"
         disabled={isDisabled}
         variant={getVariants()}
@@ -92,7 +92,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
   }
 
   const renderYear = (year: number) => (
-    <Row wrap="wrap" justify="center" p="4" css={{ gap: '4px 0' }}>
+    <Row wrap="wrap" justify="center" p="4" rowGap="4">
       {monthsNumber.map(month => renderMonth(year, month))}
     </Row>
   )
@@ -165,12 +165,12 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
             </Arrow>
             <Flex mx="4">
               <Typography color="secondary" size="14" weight="regular">
-                {today.getFullYear() + yearOffset}
+                {initialYear + yearOffset}
               </Typography>
             </Flex>
             <Flex mx="4">
               <Typography color="secondary" size="14" weight="regular">
-                {today.getFullYear() + yearOffset + 1}
+                {initialYear + yearOffset + 1}
               </Typography>
             </Flex>
             <Arrow onClick={handleNextYear}>
@@ -178,7 +178,7 @@ export const MonthRangePicker: React.FC<MonthRangePickerProps> = ({
             </Arrow>
           </Row>
           <Flex gap="4">
-            {renderYear(today.getFullYear() + yearOffset)}
+            {renderYear(initialYear + yearOffset)}
             {renderYear(today.getFullYear() + yearOffset + 1)}
           </Flex>
         </Calender>

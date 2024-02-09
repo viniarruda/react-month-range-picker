@@ -48,6 +48,7 @@ Visit http://localhost:6006/
 
 ```typescript
 
+
 onRangeSelect: (params: RangeParams) => void
 
 type RangeParams = {

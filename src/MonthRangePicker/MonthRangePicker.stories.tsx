@@ -76,8 +76,9 @@ const TemplateTwoColumns: StoryFn<MonthRangePickerProps> = () => {
       <MonthRangePicker
         onRangeSelect={onRangeSelect}
         columns={2}
-        initialYear={2020}
+        initialYear={2023}
         locale="en-US"
+        monthClassName="month"
       />
       <h1>Initial: {initialDate}</h1>
       <h1>Final: {finalDate}</h1>
